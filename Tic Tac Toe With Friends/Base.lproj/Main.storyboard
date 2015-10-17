@@ -1,13 +1,22 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="ChocolateCoveredRaindropsHollow.ttf">
+            <string>ChocolateCoveredRaindrops</string>
+            <string>ChocolateCoveredRaindrops</string>
+        </mutableArray>
+        <mutableArray key="mrsmonsterexpand.ttf">
+            <string>Mrs.MonsterExpanded</string>
+        </mutableArray>
+    </customFonts>
     <scenes>
-        <!--View Controller-->
+        <!--Login Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="LoginController" customModule="Tic_Tac_Toe_With_Friends" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +24,122 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="TIC TAC TOE" textAlignment="center" lineBreakMode="clip" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F9O-U1-hfj">
+                                <rect key="frame" x="182" y="64" width="237" height="45"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" name="Mrs.MonsterExpanded" family="Mrs. Monster Expanded" pointSize="42"/>
+                                <color key="textColor" red="0.047058823529411764" green="0.28235294117647058" blue="0.44313725490196076" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="with friends" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j3q-yX-d9O">
+                                <rect key="frame" x="200" y="107" width="200" height="41"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="41" id="Gep-C7-MJF"/>
+                                    <constraint firstAttribute="width" constant="200" id="JXk-sW-DTi"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="ChocolateCoveredRaindrops" family="ChocolateCoveredRaindrops" pointSize="46"/>
+                                <color key="textColor" red="0.99607843137254903" green="0.6705882352941176" blue="0.38039215686274508" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Compete in Tic Tac Toe with your friends and claim bragging rights!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iFc-4u-pTY">
+                                <rect key="frame" x="170" y="381" width="260" height="44"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="260" id="Yqj-an-3mA"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="ChocolateCoveredRaindrops" family="ChocolateCoveredRaindrops" pointSize="23"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vyc-R1-3gi">
+                                <rect key="frame" x="170" y="455" width="260" height="45"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.3411764705882353" green="0.24313725490196078" blue="0.49411764705882355" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="JxB-6B-WkX"/>
+                                    <constraint firstAttribute="width" constant="260" id="au3-wq-9mD"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                <state key="normal" title="Sign-in with Phone Number">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="5"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="signInWithDigits:" destination="BYZ-38-t0r" eventType="touchUpInside" id="snF-pu-hca"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="@ 2015 Wave Link, LLC All Rights Reserved" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nN6-Td-Csd">
+                                <rect key="frame" x="224" y="530" width="153" height="40"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="153" id="1sF-nT-OJ4"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
+                                <color key="textColor" red="0.047058823530000002" green="0.28235294119999998" blue="0.4431372549" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" red="0.11372549019607843" green="0.5607843137254902" blue="0.85882352941176465" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="F9O-U1-hfj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="06c-d4-Ikd"/>
+                            <constraint firstItem="iFc-4u-pTY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6g3-mb-m29"/>
+                            <constraint firstItem="vyc-R1-3gi" firstAttribute="top" secondItem="iFc-4u-pTY" secondAttribute="bottom" constant="30" id="JQR-lB-ACK"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="nN6-Td-Csd" secondAttribute="bottom" constant="30" id="RLW-ga-Wmz"/>
+                            <constraint firstItem="nN6-Td-Csd" firstAttribute="top" secondItem="vyc-R1-3gi" secondAttribute="bottom" constant="30" id="cuf-gm-SVf"/>
+                            <constraint firstItem="j3q-yX-d9O" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ohV-jM-OjK"/>
+                            <constraint firstItem="nN6-Td-Csd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="owm-KS-5nC"/>
+                            <constraint firstItem="vyc-R1-3gi" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="rSh-wl-re3"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <segue destination="jYE-U0-wpl" kind="show" identifier="homeSegue" id="WES-aj-hAA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="399" y="482"/>
+        </scene>
+        <!--Home Controller-->
+        <scene sceneID="RrT-9c-H0J">
+            <objects>
+                <tableViewController id="jYE-U0-wpl" customClass="HomeController" customModule="Tic_Tac_Toe_With_Friends" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="x6u-jU-uS6">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <view key="tableHeaderView" contentMode="scaleToFill" id="pLM-o5-F36">
+                            <rect key="frame" x="0.0" y="0.0" width="600" height="94"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <animations/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </view>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="jUy-SN-wse">
+                                <rect key="frame" x="0.0" y="122" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="jUy-SN-wse" id="Jbh-IQ-7bq">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <animations/>
+                                </tableViewCellContentView>
+                                <animations/>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="jYE-U0-wpl" id="k0w-1a-sKA"/>
+                            <outlet property="delegate" destination="jYE-U0-wpl" id="BAD-lZ-bHo"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7NC-Q8-ROZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1059" y="482"/>
         </scene>
     </scenes>
 </document>

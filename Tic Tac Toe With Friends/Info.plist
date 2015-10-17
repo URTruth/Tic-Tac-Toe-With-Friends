@@ -20,8 +20,54 @@
 	<string>????</string>
 	<key>CFBundleVersion</key>
 	<string>1</string>
+	<key>Fabric</key>
+	<dict>
+		<key>APIKey</key>
+		<string>fc4bea66669eab675a49481b279964733cad3193</string>
+		<key>Kits</key>
+		<array>
+			<dict>
+				<key>KitInfo</key>
+				<dict>
+					<key>consumerKey</key>
+					<string>nGd884UNLzBR7tN02fH9pu0dS</string>
+					<key>consumerSecret</key>
+					<string>7DBv97iQA59gH5LKS4zhIj4KqlvwA1M8LHolTft5qDIdAfNbbV</string>
+				</dict>
+				<key>KitName</key>
+				<string>Digits</string>
+			</dict>
+		</array>
+	</dict>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+	</dict>
+	<key>UIAppFonts</key>
+	<array>
+		<string>mrsmonster.ttf</string>
+		<string>mrsmonster3d.ttf</string>
+		<string>mrsmonster3dital.ttf</string>
+		<string>mrsmonsteracad.ttf</string>
+		<string>mrsmonsterboldout.ttf</string>
+		<string>mrsmonstercond.ttf</string>
+		<string>mrsmonstercondital.ttf</string>
+		<string>mrsmonsterexpand.ttf</string>
+		<string>mrsmonsterexpandital.ttf</string>
+		<string>mrsmonsterital.ttf</string>
+		<string>mrsmonsterleft.ttf</string>
+		<string>mrsmonsterout.ttf</string>
+		<string>mrsmonsteroutital.ttf</string>
+		<string>mrsmonsterrotal.ttf</string>
+		<string>mrsmonsterrotate.ttf</string>
+		<string>mrsmonsterrotate2.ttf</string>
+		<string>ChocolateCoveredRaindropsBold.ttf</string>
+		<string>ChocolateCoveredRaindropsHollow.ttf</string>
+		<string>ChocolateCoveredRaindrops.ttf</string>
+	</array>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
