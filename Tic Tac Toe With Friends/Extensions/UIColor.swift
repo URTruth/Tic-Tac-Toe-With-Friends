@@ -17,8 +17,12 @@ extension UIColor {
         return UIColor(red: 12.0/255.0, green: 72.0/255.0, blue: 113.0/255.0, alpha: 1.0)
     }
     
-    class func ticTacToeYellowColor() -> UIColor {
+    class func ticTacToeLightYellowColor() -> UIColor {
         return UIColor(red: 254.0/255.0, green: 171.0/255.0, blue: 97.0/255.0, alpha: 1.0)
+    }
+    
+    class func ticTacToeDarkYellowColor() -> UIColor {
+        return UIColor(red: 194.0/255.0, green: 90.0/255.0, blue: 5.0/255.0, alpha: 1.0)
     }
     
     class func ticTacToePurpleColor() -> UIColor {

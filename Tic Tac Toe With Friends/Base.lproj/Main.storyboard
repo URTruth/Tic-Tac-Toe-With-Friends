@@ -10,6 +10,7 @@
         </mutableArray>
         <mutableArray key="mrsmonsterexpand.ttf">
             <string>Mrs.MonsterExpanded</string>
+            <string>Mrs.MonsterExpanded</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -97,7 +98,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <segue destination="jYE-U0-wpl" kind="show" identifier="homeSegue" id="WES-aj-hAA"/>
+                        <segue destination="9nJ-mD-Ggj" kind="show" identifier="tabSegue" id="SMu-iM-WgD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -108,20 +109,33 @@
         <scene sceneID="RrT-9c-H0J">
             <objects>
                 <tableViewController id="jYE-U0-wpl" customClass="HomeController" customModule="Tic_Tac_Toe_With_Friends" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="x6u-jU-uS6">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="x6u-jU-uS6">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <view key="tableHeaderView" contentMode="scaleToFill" id="pLM-o5-F36">
-                            <rect key="frame" x="0.0" y="0.0" width="600" height="94"/>
+                            <rect key="frame" x="0.0" y="0.0" width="600" height="80"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="+ Create Game" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YcN-ko-bBl">
+                                    <rect key="frame" x="194" y="38" width="212" height="24"/>
+                                    <animations/>
+                                    <fontDescription key="fontDescription" name="Mrs.MonsterExpanded" family="Mrs. Monster Expanded" pointSize="25"/>
+                                    <color key="textColor" red="0.76078431372549016" green="0.3529411764705882" blue="0.019607843137254902" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
                             <animations/>
-                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <color key="backgroundColor" red="0.99607843139999996" green="0.6705882353" blue="0.3803921569" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="bottom" secondItem="YcN-ko-bBl" secondAttribute="bottom" constant="18" id="9Z9-Uv-cPS"/>
+                                <constraint firstItem="YcN-ko-bBl" firstAttribute="centerX" secondItem="pLM-o5-F36" secondAttribute="centerX" id="lMp-ma-XyU"/>
+                            </constraints>
                         </view>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="jUy-SN-wse">
-                                <rect key="frame" x="0.0" y="122" width="600" height="44"/>
+                                <rect key="frame" x="0.0" y="108" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="jUy-SN-wse" id="Jbh-IQ-7bq">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
@@ -136,10 +150,50 @@
                             <outlet property="delegate" destination="jYE-U0-wpl" id="BAD-lZ-bHo"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" id="cc5-46-aDE"/>
+                    <nil key="simulatedTopBarMetrics"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7NC-Q8-ROZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1059" y="482"/>
+            <point key="canvasLocation" x="1483" y="1562"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="y1v-mn-7lW">
+            <objects>
+                <tabBarController id="9nJ-mD-Ggj" customClass="TabBarController" customModule="Tic_Tac_Toe_With_Friends" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="eoo-UG-rB7">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="LdH-dQ-Q8m" kind="relationship" relationship="viewControllers" id="6Wv-k6-DXA"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sJf-gl-vee" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1110" y="482"/>
+        </scene>
+        <!--Home-->
+        <scene sceneID="Rue-8C-9T5">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="LdH-dQ-Q8m" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Home" id="Sie-Uw-lEq"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="krt-CF-3HT">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="jYE-U0-wpl" kind="relationship" relationship="rootViewController" id="bBX-vX-12E"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GPm-kz-esH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="673" y="1562"/>
         </scene>
     </scenes>
 </document>
