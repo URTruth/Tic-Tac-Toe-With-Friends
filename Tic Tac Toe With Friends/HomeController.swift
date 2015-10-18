@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AlamofireImage
 
 class HomeController: UITableViewController {
 
@@ -34,7 +35,7 @@ class HomeController: UITableViewController {
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("GameCell") as! GameCell
         
-        //cell.opponentImageView.af_setImageWithURL(NSURL(string: games[indexPath.row]["opponentImage"] as! String)!, placeholderImage: UIImage(named: "Home"))
+        cell.opponentImageView.af_setImageWithURL(NSURL(string: games[indexPath.row]["opponentImage"] as! String)!, placeholderImage: UIImage(named: "Home"))
         cell.opponentNameLabel.text = games[indexPath.row]["opponentName"] as? String
         
         return cell
