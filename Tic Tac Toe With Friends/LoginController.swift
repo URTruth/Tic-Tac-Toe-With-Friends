@@ -24,7 +24,7 @@ class LoginController: UIViewController {
             if session != nil {
                 print(session.phoneNumber)
                 print(session.userID)
-                self.performSegueWithIdentifier("tabSegue", sender: nil)
+                self.performSegueWithIdentifier("TabSegue", sender: nil)
             }
         }
     }

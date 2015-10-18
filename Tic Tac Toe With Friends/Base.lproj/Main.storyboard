@@ -4,11 +4,12 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
     </dependencies>
     <customFonts key="customFonts">
-        <mutableArray key="ChocolateCoveredRaindropsHollow.ttf">
+        <mutableArray key="ChocolateCoveredRaindrops.ttf">
             <string>ChocolateCoveredRaindrops</string>
             <string>ChocolateCoveredRaindrops</string>
         </mutableArray>
         <mutableArray key="mrsmonsterexpand.ttf">
+            <string>Mrs.MonsterExpanded</string>
             <string>Mrs.MonsterExpanded</string>
             <string>Mrs.MonsterExpanded</string>
         </mutableArray>
@@ -54,6 +55,16 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="@ 2015 Wave Link, LLC All Rights Reserved" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nN6-Td-Csd">
+                                <rect key="frame" x="224" y="530" width="153" height="40"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="153" id="1sF-nT-OJ4"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
+                                <color key="textColor" red="0.047058823530000002" green="0.28235294119999998" blue="0.4431372549" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vyc-R1-3gi">
                                 <rect key="frame" x="170" y="455" width="260" height="45"/>
                                 <animations/>
@@ -73,16 +84,6 @@
                                     <action selector="signInWithDigits:" destination="BYZ-38-t0r" eventType="touchUpInside" id="snF-pu-hca"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="@ 2015 Wave Link, LLC All Rights Reserved" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nN6-Td-Csd">
-                                <rect key="frame" x="224" y="530" width="153" height="40"/>
-                                <animations/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="153" id="1sF-nT-OJ4"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
-                                <color key="textColor" red="0.047058823530000002" green="0.28235294119999998" blue="0.4431372549" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" red="0.11372549019607843" green="0.5607843137254902" blue="0.85882352941176465" alpha="1" colorSpace="calibratedRGB"/>
@@ -98,7 +99,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <segue destination="9nJ-mD-Ggj" kind="show" identifier="tabSegue" id="SMu-iM-WgD"/>
+                        <segue destination="9nJ-mD-Ggj" kind="show" identifier="TabSegue" id="SMu-iM-WgD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -134,15 +135,43 @@
                             </constraints>
                         </view>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="jUy-SN-wse">
-                                <rect key="frame" x="0.0" y="108" width="600" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="GameCell" rowHeight="80" id="jUy-SN-wse" customClass="GameCell" customModule="Tic_Tac_Toe_With_Friends" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="108" width="600" height="80"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="jUy-SN-wse" id="Jbh-IQ-7bq">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="79"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="23E-g8-OYD">
+                                            <rect key="frame" x="8" y="0.0" width="71" height="71"/>
+                                            <animations/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="5"/>
+                                            </userDefinedRuntimeAttributes>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Joe Brown" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XOR-nv-yaY">
+                                            <rect key="frame" x="87" y="14" width="505" height="21"/>
+                                            <animations/>
+                                            <fontDescription key="fontDescription" name="Mrs.MonsterExpanded" family="Mrs. Monster Expanded" pointSize="20"/>
+                                            <color key="textColor" red="0.14901960780000001" green="0.14901960780000001" blue="0.14901960780000001" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Wants you to play!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vjd-iG-1yw">
+                                            <rect key="frame" x="87" y="40" width="505" height="21"/>
+                                            <animations/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
+                                            <color key="textColor" red="0.14901960780000001" green="0.14901960780000001" blue="0.14901960780000001" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
                                     <animations/>
                                 </tableViewCellContentView>
                                 <animations/>
+                                <connections>
+                                    <outlet property="opponentImageView" destination="23E-g8-OYD" id="ntt-xG-2qK"/>
+                                    <outlet property="opponentNameLabel" destination="XOR-nv-yaY" id="zw2-IF-hAM"/>
+                                    <outlet property="statusLabel" destination="Vjd-iG-1yw" id="lTY-e3-c9w"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
