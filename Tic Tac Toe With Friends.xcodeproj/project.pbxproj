@@ -285,7 +285,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "./Fabric.framework/run fc4bea66669eab675a49481b279964733cad3193 7840fcadac711bbde5060da608aa7d350d4c35bd0b531351030032231aad2519";
+			shellScript = "";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -415,11 +415,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/Tic",
-					Tac,
-					Toe,
-					With,
-					Friends/Frameworks,
+					"$(PROJECT_DIR)/**",
 				);
 				INFOPLIST_FILE = "Tic Tac Toe With Friends/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -434,11 +430,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/Tic",
-					Tac,
-					Toe,
-					With,
-					Friends/Frameworks,
+					"$(PROJECT_DIR)/**",
 				);
 				INFOPLIST_FILE = "Tic Tac Toe With Friends/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -466,6 +458,7 @@
 				B6FD06B41BD1F7A4000B64FA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
