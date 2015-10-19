@@ -14,6 +14,8 @@
 		B6B4CAC91BD4471600DA6041 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B6B4C7C01BD4451300DA6041 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B6B4CACA1BD4471600DA6041 /* AlamofireImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6B4C7C21BD4451300DA6041 /* AlamofireImage.framework */; };
 		B6B4CACB1BD4471600DA6041 /* AlamofireImage.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B6B4C7C21BD4451300DA6041 /* AlamofireImage.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B6B4CAD21BD47F3800DA6041 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B4CAD11BD47F3800DA6041 /* Game.swift */; settings = {ASSET_TAGS = (); }; };
+		B6B4CAD41BD487F500DA6041 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B4CAD31BD487F500DA6041 /* Request.swift */; settings = {ASSET_TAGS = (); }; };
 		B6FD06A41BD1F7A4000B64FA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FD06A31BD1F7A4000B64FA /* AppDelegate.swift */; };
 		B6FD06A61BD1F7A4000B64FA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FD06A51BD1F7A4000B64FA /* ViewController.swift */; };
 		B6FD06A91BD1F7A4000B64FA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6FD06A71BD1F7A4000B64FA /* Main.storyboard */; };
@@ -71,6 +73,8 @@
 		B6B4C7BC1BD4451300DA6041 /* Cartfile.resolved */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile.resolved; sourceTree = "<group>"; };
 		B6B4C7C01BD4451300DA6041 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Alamofire.framework; sourceTree = "<group>"; };
 		B6B4C7C21BD4451300DA6041 /* AlamofireImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AlamofireImage.framework; sourceTree = "<group>"; };
+		B6B4CAD11BD47F3800DA6041 /* Game.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		B6B4CAD31BD487F500DA6041 /* Request.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
 		B6FD06A01BD1F7A4000B64FA /* Tic Tac Toe With Friends.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tic Tac Toe With Friends.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6FD06A31BD1F7A4000B64FA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B6FD06A51BD1F7A4000B64FA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -158,6 +162,14 @@
 			path = iOS;
 			sourceTree = "<group>";
 		};
+		B6B4CACD1BD46ECC00DA6041 /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				B6B4CAD11BD47F3800DA6041 /* Game.swift */,
+			);
+			path = Libraries;
+			sourceTree = "<group>";
+		};
 		B6FD06971BD1F7A3000B64FA = {
 			isa = PBXGroup;
 			children = (
@@ -177,8 +189,8 @@
 		B6FD06A21BD1F7A4000B64FA /* Tic Tac Toe With Friends */ = {
 			isa = PBXGroup;
 			children = (
+				B6B4CACD1BD46ECC00DA6041 /* Libraries */,
 				B61D6D521BD424FF00263945 /* Cells */,
-				B6FD073C1BD272B0000B64FA /* Libraries */,
 				B6FD07371BD221B2000B64FA /* Extensions */,
 				B6FD07271BD21499000B64FA /* Frameworks */,
 				B6FD06FE1BD204C5000B64FA /* Fonts */,
@@ -241,15 +253,9 @@
 			children = (
 				B6FD07381BD22248000B64FA /* UIColor.swift */,
 				B6FD07421BD2D463000B64FA /* UIImage.swift */,
+				B6B4CAD31BD487F500DA6041 /* Request.swift */,
 			);
 			path = Extensions;
-			sourceTree = "<group>";
-		};
-		B6FD073C1BD272B0000B64FA /* Libraries */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Libraries;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -364,11 +370,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				B6FD06A61BD1F7A4000B64FA /* ViewController.swift in Sources */,
+				B6B4CAD21BD47F3800DA6041 /* Game.swift in Sources */,
 				B6FD07391BD22248000B64FA /* UIColor.swift in Sources */,
 				B6FD06B81BD1FCE9000B64FA /* LoginController.swift in Sources */,
 				B61D6D541BD4251100263945 /* GameCell.swift in Sources */,
 				B6FD07411BD2C88B000B64FA /* TabBarController.swift in Sources */,
 				B6FD06A41BD1F7A4000B64FA /* AppDelegate.swift in Sources */,
+				B6B4CAD41BD487F500DA6041 /* Request.swift in Sources */,
 				B6FD073B1BD23376000B64FA /* HomeController.swift in Sources */,
 				B6FD07431BD2D463000B64FA /* UIImage.swift in Sources */,
 			);

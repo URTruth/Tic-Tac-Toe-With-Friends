@@ -2,9 +2,11 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <mutableArray key="ChocolateCoveredRaindrops.ttf">
+        <mutableArray key="ChocolateCoveredRaindropsHollow.ttf">
+            <string>ChocolateCoveredRaindrops</string>
             <string>ChocolateCoveredRaindrops</string>
             <string>ChocolateCoveredRaindrops</string>
         </mutableArray>
@@ -116,61 +118,124 @@
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <view key="tableHeaderView" contentMode="scaleToFill" id="pLM-o5-F36">
-                            <rect key="frame" x="0.0" y="0.0" width="600" height="80"/>
+                            <rect key="frame" x="0.0" y="0.0" width="600" height="120"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="+ Create Game" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YcN-ko-bBl">
-                                    <rect key="frame" x="194" y="38" width="212" height="24"/>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DXy-oQ-tE4">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="80"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="+ Create Game" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YcN-ko-bBl">
+                                            <rect key="frame" x="194" y="35" width="212" height="24"/>
+                                            <animations/>
+                                            <fontDescription key="fontDescription" name="Mrs.MonsterExpanded" family="Mrs. Monster Expanded" pointSize="25"/>
+                                            <color key="textColor" red="0.76078431372549016" green="0.3529411764705882" blue="0.019607843137254902" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
                                     <animations/>
-                                    <fontDescription key="fontDescription" name="Mrs.MonsterExpanded" family="Mrs. Monster Expanded" pointSize="25"/>
-                                    <color key="textColor" red="0.76078431372549016" green="0.3529411764705882" blue="0.019607843137254902" alpha="1" colorSpace="calibratedRGB"/>
-                                    <nil key="highlightedColor"/>
-                                </label>
+                                    <color key="backgroundColor" red="0.99607843139999996" green="0.6705882353" blue="0.3803921569" alpha="1" colorSpace="calibratedRGB"/>
+                                    <constraints>
+                                        <constraint firstItem="YcN-ko-bBl" firstAttribute="centerX" secondItem="DXy-oQ-tE4" secondAttribute="centerX" id="5Uc-ky-wJ6"/>
+                                        <constraint firstAttribute="height" constant="80" id="Thf-zd-B9Z"/>
+                                        <constraint firstItem="YcN-ko-bBl" firstAttribute="top" secondItem="DXy-oQ-tE4" secondAttribute="top" constant="35" id="p36-Iw-YTH"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VSE-EE-MRt">
+                                    <rect key="frame" x="0.0" y="80" width="600" height="40"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="GAMES" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UMf-yy-Cdq">
+                                            <rect key="frame" x="12" y="0.0" width="166" height="40"/>
+                                            <animations/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="40" id="3qW-dv-kSO"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="Mrs.MonsterExpanded" family="Mrs. Monster Expanded" pointSize="17"/>
+                                            <color key="textColor" red="0.047058823530000002" green="0.28235294119999998" blue="0.4431372549" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <animations/>
+                                    <color key="backgroundColor" red="0.1137254902" green="0.56078431370000004" blue="0.85882352939999995" alpha="1" colorSpace="calibratedRGB"/>
+                                    <constraints>
+                                        <constraint firstItem="UMf-yy-Cdq" firstAttribute="top" secondItem="VSE-EE-MRt" secondAttribute="top" id="GRz-l6-QJc"/>
+                                        <constraint firstItem="UMf-yy-Cdq" firstAttribute="leading" secondItem="VSE-EE-MRt" secondAttribute="leading" constant="12" id="hFg-L8-huD"/>
+                                        <constraint firstAttribute="height" constant="40" id="jCi-XO-SX7"/>
+                                    </constraints>
+                                </view>
                             </subviews>
                             <animations/>
-                            <color key="backgroundColor" red="0.99607843139999996" green="0.6705882353" blue="0.3803921569" alpha="1" colorSpace="calibratedRGB"/>
                             <constraints>
-                                <constraint firstAttribute="bottom" secondItem="YcN-ko-bBl" secondAttribute="bottom" constant="18" id="9Z9-Uv-cPS"/>
-                                <constraint firstItem="YcN-ko-bBl" firstAttribute="centerX" secondItem="pLM-o5-F36" secondAttribute="centerX" id="lMp-ma-XyU"/>
+                                <constraint firstItem="VSE-EE-MRt" firstAttribute="top" secondItem="DXy-oQ-tE4" secondAttribute="bottom" id="3cn-TF-FEI"/>
+                                <constraint firstItem="DXy-oQ-tE4" firstAttribute="leading" secondItem="pLM-o5-F36" secondAttribute="leading" id="3dv-sr-Ajy"/>
+                                <constraint firstAttribute="trailing" secondItem="DXy-oQ-tE4" secondAttribute="trailing" id="OwU-yf-x2O"/>
+                                <constraint firstItem="DXy-oQ-tE4" firstAttribute="top" secondItem="pLM-o5-F36" secondAttribute="top" id="Sis-3M-VNv"/>
+                                <constraint firstItem="VSE-EE-MRt" firstAttribute="leading" secondItem="pLM-o5-F36" secondAttribute="leading" id="gBB-p5-NKZ"/>
+                                <constraint firstAttribute="trailing" secondItem="VSE-EE-MRt" secondAttribute="trailing" id="qxE-0f-EuP"/>
                             </constraints>
                         </view>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="GameCell" rowHeight="80" id="jUy-SN-wse" customClass="GameCell" customModule="Tic_Tac_Toe_With_Friends" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="108" width="600" height="80"/>
+                                <rect key="frame" x="0.0" y="148" width="600" height="80"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="jUy-SN-wse" id="Jbh-IQ-7bq">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="79"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="23E-g8-OYD">
-                                            <rect key="frame" x="8" y="0.0" width="71" height="71"/>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="23E-g8-OYD">
+                                            <rect key="frame" x="12" y="10" width="60" height="60"/>
                                             <animations/>
-                                            <userDefinedRuntimeAttributes>
-                                                <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="5"/>
-                                            </userDefinedRuntimeAttributes>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="60" id="ab0-b7-u4S"/>
+                                                <constraint firstAttribute="height" constant="60" id="plA-wp-4Hd"/>
+                                            </constraints>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Joe Brown" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XOR-nv-yaY">
-                                            <rect key="frame" x="87" y="14" width="505" height="21"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Wants you to play!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vjd-iG-1yw">
+                                            <rect key="frame" x="88" y="46" width="424" height="21"/>
                                             <animations/>
-                                            <fontDescription key="fontDescription" name="Mrs.MonsterExpanded" family="Mrs. Monster Expanded" pointSize="20"/>
-                                            <color key="textColor" red="0.14901960780000001" green="0.14901960780000001" blue="0.14901960780000001" alpha="1" colorSpace="calibratedRGB"/>
+                                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="13"/>
+                                            <color key="textColor" red="0.3411764706" green="0.24313725489999999" blue="0.4941176471" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Wants you to play!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vjd-iG-1yw">
-                                            <rect key="frame" x="87" y="40" width="505" height="21"/>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zCT-Tr-Lii">
+                                            <rect key="frame" x="88" y="14" width="27" height="27"/>
                                             <animations/>
-                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="27" id="JKn-6M-IKp"/>
+                                                <constraint firstAttribute="height" constant="27" id="vGC-VC-4Dw"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Joe Brown" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XOR-nv-yaY">
+                                            <rect key="frame" x="123" y="17" width="424" height="21"/>
+                                            <animations/>
+                                            <fontDescription key="fontDescription" name="ChocolateCoveredRaindrops" family="ChocolateCoveredRaindrops" pointSize="30"/>
                                             <color key="textColor" red="0.14901960780000001" green="0.14901960780000001" blue="0.14901960780000001" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                     <animations/>
+                                    <constraints>
+                                        <constraint firstItem="XOR-nv-yaY" firstAttribute="top" secondItem="Jbh-IQ-7bq" secondAttribute="topMargin" constant="9" id="2UR-cM-HDD"/>
+                                        <constraint firstItem="XOR-nv-yaY" firstAttribute="leading" secondItem="zCT-Tr-Lii" secondAttribute="trailing" constant="8" id="9In-oi-OpC"/>
+                                        <constraint firstItem="23E-g8-OYD" firstAttribute="leading" secondItem="Jbh-IQ-7bq" secondAttribute="leadingMargin" constant="4" id="CKs-gp-cmm"/>
+                                        <constraint firstItem="zCT-Tr-Lii" firstAttribute="leading" secondItem="23E-g8-OYD" secondAttribute="trailing" constant="16" id="NFQ-Nd-bP8"/>
+                                        <constraint firstItem="zCT-Tr-Lii" firstAttribute="top" secondItem="Jbh-IQ-7bq" secondAttribute="topMargin" constant="6" id="TI9-og-XlB"/>
+                                        <constraint firstItem="23E-g8-OYD" firstAttribute="centerY" secondItem="Jbh-IQ-7bq" secondAttribute="centerY" id="cYB-Pe-WNq"/>
+                                        <constraint firstItem="Vjd-iG-1yw" firstAttribute="leading" secondItem="23E-g8-OYD" secondAttribute="trailing" constant="12" id="eU6-Y4-k6J"/>
+                                        <constraint firstItem="XOR-nv-yaY" firstAttribute="leading" secondItem="23E-g8-OYD" secondAttribute="trailing" constant="10" id="hfw-yQ-elh"/>
+                                        <constraint firstItem="Vjd-iG-1yw" firstAttribute="top" secondItem="zCT-Tr-Lii" secondAttribute="bottom" constant="5" id="lDG-XM-YuG"/>
+                                    </constraints>
+                                    <variation key="default">
+                                        <mask key="constraints">
+                                            <exclude reference="hfw-yQ-elh"/>
+                                        </mask>
+                                    </variation>
                                 </tableViewCellContentView>
                                 <animations/>
                                 <connections>
-                                    <outlet property="opponentImageView" destination="23E-g8-OYD" id="ntt-xG-2qK"/>
-                                    <outlet property="opponentNameLabel" destination="XOR-nv-yaY" id="zw2-IF-hAM"/>
-                                    <outlet property="statusLabel" destination="Vjd-iG-1yw" id="lTY-e3-c9w"/>
+                                    <outlet property="iconImageView" destination="zCT-Tr-Lii" id="W49-nI-YeZ"/>
+                                    <outlet property="nameLabel" destination="XOR-nv-yaY" id="zjn-P5-HDA"/>
+                                    <outlet property="profileImageView" destination="23E-g8-OYD" id="pbB-g9-5G6"/>
+                                    <outlet property="statusLabel" destination="Vjd-iG-1yw" id="QYK-Hq-bhh"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>

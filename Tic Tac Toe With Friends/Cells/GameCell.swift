@@ -10,14 +10,16 @@ import UIKit
 
 class GameCell: UITableViewCell {
     
-    @IBOutlet var opponentImageView: UIImageView!
-    @IBOutlet var opponentNameLabel: UILabel!
+    @IBOutlet var profileImageView: UIImageView!
+    @IBOutlet var iconImageView: UIImageView!
+    @IBOutlet var nameLabel: UILabel!
     @IBOutlet var statusLabel: UILabel!
     @IBOutlet var actionButton: UIButton!
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        
+        profileImageView.layer.cornerRadius = 5
     }
 
     override func setSelected(selected: Bool, animated: Bool) {
