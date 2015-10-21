@@ -12,20 +12,21 @@ import AlamofireImage
 
 class HomeController: UITableViewController {
 
-    private var games = [
-        ["id": 1, "invitorUserId": 2, "inviteeUserId": 1, "type": 0, "status": 0, "turn": 0, "lastWinner": 0, "invitorWinCount": 0, "inviteeWinCount": 0, "opponentName": "Kelvin Graddick", "opponentImage": "https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xtf1/v/t1.0-1/p160x160/11218517_10204636870097875_2288167644375633074_n.jpg?oh=9b93e71f19ea0e22b2625cd41f0ff57e&oe=56D2A1B9&__gda__=1456297007_0b55c93c4b8a5bb5aab80a475a482d02"],
-        ["id": 2, "invitorUserId": 1, "inviteeUserId": 2, "type": 0, "status": 0, "turn": 0, "lastWinner": 0, "invitorWinCount": 0, "inviteeWinCount": 0, "opponentName": "Joshua Graddick", "opponentImage": "https://scontent-ord1-1.xx.fbcdn.net/hphotos-xpa1/v/t1.0-9/1463696_10201775299855850_1206157794_n.jpg?oh=1fa59e7e21ff6f95b678536d38f2621f&oe=569438B7"],
-        ["id": 3, "invitorUserId": 1, "inviteeUserId": 2, "type": 0, "status": 0, "turn": 0, "lastWinner": 0, "invitorWinCount": 0, "inviteeWinCount": 0, "opponentName": "Joshua Graddick", "opponentImage": "https://scontent-ord1-1.xx.fbcdn.net/hphotos-xpa1/v/t1.0-9/1463696_10201775299855850_1206157794_n.jpg?oh=1fa59e7e21ff6f95b678536d38f2621f&oe=569438B7"]]
+    private var games: [Game] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         navigationController?.setNavigationBarHidden(navigationController?.navigationBarHidden == false, animated: true)
-        self.automaticallyAdjustsScrollViewInsets = false;
+        automaticallyAdjustsScrollViewInsets = false;
         
-        Alamofire.request(.GET, "http://example.com/users")
-            .responseCollection { (response: Response<[Game], NSError>) in
-                debugPrint(response)
+        Alamofire.request(.GET, "http://www.wavelinkllc.com/tictactoewithfriends/get_games.php", parameters: ["userId": 2])
+            .responseJSON { response in
+                let dataArray: NSArray = (response.result.value as? NSArray)!
+                for data in dataArray {
+                    self.games.append(Game.init(JSONData: data as! Dictionary<String, AnyObject>))
+                }
+                self.tableView.reloadData()
         }
     }
 
@@ -34,14 +35,16 @@ class HomeController: UITableViewController {
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        print("count" + String(games.count))
         return games.count
     }
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("GameCell") as! GameCell
         
-        cell.profileImageView.af_setImageWithURL(NSURL(string: games[indexPath.row]["opponentImage"] as! String)!, placeholderImage: UIImage(named: "Home"))
-        cell.nameLabel.text = games[indexPath.row]["opponentName"] as? String
+        //cell.profileImageView.af_setImageWithURL(NSURL(string: games[indexPath.row].playerOneId as! String)!, placeholderImage: UIImage(named: "Home"))
+        print("User with Id: " + String(games[indexPath.row].id))
+        cell.nameLabel.text = String(games[indexPath.row].id) + " is the User Id"
         
         return cell
     }

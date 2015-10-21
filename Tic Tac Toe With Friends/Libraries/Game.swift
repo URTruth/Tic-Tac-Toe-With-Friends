@@ -16,56 +16,28 @@ enum GameStatus: Int {
     case PlayerTwoWon
 }
 
-final class Game: NSObject, ResponseObjectSerializable, ResponseCollectionSerializable {
+class Game: NSObject {
     
-    var id: Int
-    var playerOneId: Int
-    var playerTwoId: Int
-    var type: Int
-    var status: Int
-    var playerOneWins: Int
-    var playerTwoWins: Int
-    var space1x1: Int?
-    var space1x2: Int?
-    var space1x3: Int?
-    var space2x1: Int?
-    var space2x2: Int?
-    var space2x3: Int?
-    var space3x1: Int?
-    var space3x2: Int?
-    var space3x3: Int?
+    var id: Int = 0
+    var playerOneId: Int = 0
+    var playerTwoId: Int = 0
+    var type: Int = 0
+    var status: Int = 0
+    var playerOneWins: Int = 0
+    var playerTwoWins: Int = 0
+    var space1x1: Int = 0
+    var space1x2: Int = 0
+    var space1x3: Int = 0
+    var space2x1: Int = 0
+    var space2x2: Int = 0
+    var space2x3: Int = 0
+    var space3x1: Int = 0
+    var space3x2: Int = 0
+    var space3x3: Int = 0
     
-    init?(response: NSHTTPURLResponse, representation: AnyObject) {
-        self.id = representation.valueForKeyPath("id") as! Int
-        self.playerOneId = representation.valueForKeyPath("playerOneId") as! Int
-        self.playerTwoId = representation.valueForKeyPath("playerTwoId") as! Int
-        self.type = representation.valueForKeyPath("type") as! Int
-        self.status = representation.valueForKeyPath("status") as! Int
-        self.playerOneWins = representation.valueForKeyPath("playerOneWins") as! Int
-        self.playerTwoWins = representation.valueForKeyPath("playerTwoWins") as! Int
-        self.space1x1 = representation.valueForKeyPath("space1x1") as? Int
-        self.space1x2 = representation.valueForKeyPath("space1x2") as? Int
-        self.space1x3 = representation.valueForKeyPath("space1x3") as? Int
-        self.space2x1 = representation.valueForKeyPath("space2x1") as? Int
-        self.space2x2 = representation.valueForKeyPath("space2x2") as? Int
-        self.space2x3 = representation.valueForKeyPath("space2x3") as? Int
-        self.space3x1 = representation.valueForKeyPath("space3x1") as? Int
-        self.space3x2 = representation.valueForKeyPath("space3x2") as? Int
-        self.space3x3 = representation.valueForKeyPath("space3x3") as? Int
-    }
-    
-    static func collection(response response: NSHTTPURLResponse, representation: AnyObject) -> [Game] {
-        var games: [Game] = []
-        
-        if let representation = representation as? [[String: AnyObject]] {
-            for gameRepresentation in representation {
-                if let game = Game(response: response, representation: gameRepresentation) {
-                    games.append(game)
-                }
-            }
-        }
-        
-        return games
+    init(JSONData: Dictionary<String, AnyObject>) {
+        super.init()
+        self.setValuesForKeysWithDictionary(JSONData)
     }
     
 }
