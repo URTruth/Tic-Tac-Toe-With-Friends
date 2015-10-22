@@ -19,12 +19,13 @@ enum GameStatus: Int {
 class Game: NSObject {
     
     var id: Int = 0
-    var playerOneId: Int = 0
-    var playerTwoId: Int = 0
+    var opponentId: Int = 0
+    var opponentName: String = ""
+    var opponentPhoto: String = ""
     var type: Int = 0
     var status: Int = 0
-    var playerOneWins: Int = 0
-    var playerTwoWins: Int = 0
+    var playerWins: Int = 0
+    var opponentWins: Int = 0
     var space1x1: Int = 0
     var space1x2: Int = 0
     var space1x3: Int = 0

@@ -35,16 +35,18 @@ class HomeController: UITableViewController {
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        print("count" + String(games.count))
         return games.count
     }
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("GameCell") as! GameCell
         
-        //cell.profileImageView.af_setImageWithURL(NSURL(string: games[indexPath.row].playerOneId as! String)!, placeholderImage: UIImage(named: "Home"))
-        print("User with Id: " + String(games[indexPath.row].id))
-        cell.nameLabel.text = String(games[indexPath.row].id) + " is the User Id"
+        cell.profileImageView.af_setImageWithURL(NSURL(string: games[indexPath.row].opponentPhoto)!, placeholderImage: UIImage(named: "Home"))
+        //switch games[indexPath.row].status AS GameStatus {
+        //    case .Unaccepted: break;
+        //}
+        //cell.iconImageView
+        cell.nameLabel.text = games[indexPath.row].opponentName
         
         return cell
     }
@@ -52,10 +54,10 @@ class HomeController: UITableViewController {
     override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         return 80
         switch indexPath.row {
-            case 0...1: return 35
-            case 2...4: return 65
-            case 5: return 100
-            default: return 150
+        case 0...1: return 35
+        case 2...4: return 65
+        case 5: return 100
+        default: return 150
         }
     }
 
