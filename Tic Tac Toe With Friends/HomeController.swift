@@ -42,11 +42,41 @@ class HomeController: UITableViewController {
         let cell = tableView.dequeueReusableCellWithIdentifier("GameCell") as! GameCell
         
         cell.profileImageView.af_setImageWithURL(NSURL(string: games[indexPath.row].opponentPhoto)!, placeholderImage: UIImage(named: "Home"))
-        //switch games[indexPath.row].status AS GameStatus {
-        //    case .Unaccepted: break;
-        //}
-        //cell.iconImageView
+        cell.iconImageView.image = UIImage(named: "User")
         cell.nameLabel.text = games[indexPath.row].opponentName
+        
+        switch GameStatus(rawValue: games[indexPath.row].status)! {
+            case .Unaccepted:
+                if (games[indexPath.row].isPlayerOne) {
+                    cell.statusLabel.text = "Waiting for " + games[indexPath.row].opponentName + " to accept.";
+                } else {
+                    cell.statusLabel.text = games[indexPath.row].opponentName + " has challenged you!";
+                }
+            case .PlayerOneTurn:
+                if (games[indexPath.row].isPlayerOne) {
+                    cell.statusLabel.text = "Your move!";
+                } else {
+                    cell.statusLabel.text = games[indexPath.row].opponentName + "'s move.";
+                }
+            case .PlayerTwoTurn:
+                if (games[indexPath.row].isPlayerOne) {
+                    cell.statusLabel.text = games[indexPath.row].opponentName + "'s move.";
+                } else {
+                    cell.statusLabel.text = "Your move!";
+                }
+            case .PlayerOneWon:
+                if (games[indexPath.row].isPlayerOne) {
+                    cell.statusLabel.text = "You won! Rematch?";
+                } else {
+                    cell.statusLabel.text = games[indexPath.row].opponentName + " beat you. Rematch?";
+                }
+            case .PlayerTwoWon:
+                if (games[indexPath.row].isPlayerOne) {
+                    cell.statusLabel.text = games[indexPath.row].opponentName + " beat you. Rematch?";
+                } else {
+                    cell.statusLabel.text = "You won! Rematch?";
+                }
+        }
         
         return cell
     }

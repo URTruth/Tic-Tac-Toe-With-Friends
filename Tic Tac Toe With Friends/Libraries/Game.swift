@@ -26,6 +26,7 @@ class Game: NSObject {
     var status: Int = 0
     var playerWins: Int = 0
     var opponentWins: Int = 0
+    var isPlayerOne: Bool = false
     var space1x1: Int = 0
     var space1x2: Int = 0
     var space1x3: Int = 0
