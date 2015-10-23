@@ -32,16 +32,16 @@ class User {
             .responseJSON { response in
                 if (response.result.isSuccess) {
                     if (response.result.value != nil) {
-                        let data: Dictionary = (response.result.value as? Dictionary<String, AnyObject>)!
-                        self.id = self.getString(data["userId"])
-                        self.name = self.getString(data["name"])
-                        self.email = self.getString(data["email"])
-                        self.phone = self.getString(data["phone"])
-                        self.photo = self.getString(data["photo"])
-                        self.facebookId = self.getString(data["facebookId"])
-                        self.twitterId = self.getString(data["twitterId"])
-                        self.digitsId = self.getString(data["digitsId"])
-                        self.wins = self.getString(data["wins"])
+                        let user: Dictionary = (response.result.value as? Dictionary<String, AnyObject>)!
+                        self.id = self.getString(user["id"])
+                        self.name = self.getString(user["name"])
+                        self.email = self.getString(user["email"])
+                        self.phone = self.getString(user["phone"])
+                        self.photo = self.getString(user["photo"])
+                        self.facebookId = self.getString(user["facebookId"])
+                        self.twitterId = self.getString(user["twitterId"])
+                        self.digitsId = self.getString(user["digitsId"])
+                        self.wins = self.getString(user["wins"])
                         self.isLoggedIn = true
                         self.keychain["userId"] = self.id
                         completion(isSuccess: true)

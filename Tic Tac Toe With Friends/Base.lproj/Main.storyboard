@@ -9,6 +9,7 @@
             <string>ChocolateCoveredRaindrops</string>
             <string>ChocolateCoveredRaindrops</string>
             <string>ChocolateCoveredRaindrops</string>
+            <string>ChocolateCoveredRaindrops</string>
         </mutableArray>
         <mutableArray key="mrsmonsterexpand.ttf">
             <string>Mrs.MonsterExpanded</string>
@@ -124,11 +125,21 @@
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DXy-oQ-tE4">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="80"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="+ Create Game" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YcN-ko-bBl">
-                                            <rect key="frame" x="194" y="35" width="212" height="24"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Tic Tac Toe" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YcN-ko-bBl">
+                                            <rect key="frame" x="8" y="35" width="135" height="24"/>
                                             <animations/>
                                             <fontDescription key="fontDescription" name="Mrs.MonsterExpanded" family="Mrs. Monster Expanded" pointSize="25"/>
                                             <color key="textColor" red="0.76078431372549016" green="0.3529411764705882" blue="0.019607843137254902" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="with friends" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zlZ-Th-Y3K">
+                                            <rect key="frame" x="144" y="37" width="86" height="26"/>
+                                            <animations/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="86" id="ku9-Uo-CgC"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="ChocolateCoveredRaindrops" family="ChocolateCoveredRaindrops" pointSize="26"/>
+                                            <color key="textColor" red="0.70196078431372544" green="0.27450980392156865" blue="0.031372549019607843" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
@@ -136,9 +147,17 @@
                                     <color key="backgroundColor" red="0.99607843139999996" green="0.6705882353" blue="0.3803921569" alpha="1" colorSpace="calibratedRGB"/>
                                     <constraints>
                                         <constraint firstItem="YcN-ko-bBl" firstAttribute="centerX" secondItem="DXy-oQ-tE4" secondAttribute="centerX" id="5Uc-ky-wJ6"/>
+                                        <constraint firstItem="YcN-ko-bBl" firstAttribute="leading" secondItem="DXy-oQ-tE4" secondAttribute="leading" constant="8" id="Rbh-7v-cud"/>
                                         <constraint firstAttribute="height" constant="80" id="Thf-zd-B9Z"/>
+                                        <constraint firstItem="zlZ-Th-Y3K" firstAttribute="top" secondItem="DXy-oQ-tE4" secondAttribute="top" constant="37" id="W4n-gE-5QE"/>
                                         <constraint firstItem="YcN-ko-bBl" firstAttribute="top" secondItem="DXy-oQ-tE4" secondAttribute="top" constant="35" id="p36-Iw-YTH"/>
+                                        <constraint firstItem="zlZ-Th-Y3K" firstAttribute="leading" secondItem="YcN-ko-bBl" secondAttribute="trailing" constant="5" id="zyt-0L-6kd"/>
                                     </constraints>
+                                    <variation key="default">
+                                        <mask key="constraints">
+                                            <exclude reference="5Uc-ky-wJ6"/>
+                                        </mask>
+                                    </variation>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VSE-EE-MRt">
                                     <rect key="frame" x="0.0" y="80" width="600" height="40"/>
