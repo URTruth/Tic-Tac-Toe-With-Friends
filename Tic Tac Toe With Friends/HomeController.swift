@@ -40,42 +40,23 @@ class HomeController: UITableViewController {
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("GameCell") as! GameCell
+        let game: Game = games[indexPath.row]
         
-        cell.profileImageView.af_setImageWithURL(NSURL(string: games[indexPath.row].opponentPhoto)!, placeholderImage: UIImage(named: "Home"))
+        cell.profileImageView.af_setImageWithURL(NSURL(string: game.opponentPhoto)!, placeholderImage: UIImage(named: "Home"))
         cell.iconImageView.image = UIImage(named: "User")
-        cell.nameLabel.text = games[indexPath.row].opponentName
+        cell.nameLabel.text = game.opponentName
         
-        switch GameStatus(rawValue: games[indexPath.row].status)! {
+        switch GameStatus(rawValue: game.status)! {
             case .Unaccepted:
-                if (games[indexPath.row].isPlayerOne) {
-                    cell.statusLabel.text = "Waiting for " + games[indexPath.row].opponentName + " to accept.";
-                } else {
-                    cell.statusLabel.text = games[indexPath.row].opponentName + " has challenged you!";
-                }
+                cell.statusLabel.text = game.isPlayerOne ? "Waiting for them to accept." : "Accept the challenge!"
             case .PlayerOneTurn:
-                if (games[indexPath.row].isPlayerOne) {
-                    cell.statusLabel.text = "Your move!";
-                } else {
-                    cell.statusLabel.text = games[indexPath.row].opponentName + "'s move.";
-                }
+                cell.statusLabel.text = game.isPlayerOne ? "Your move!" : "Their move."
             case .PlayerTwoTurn:
-                if (games[indexPath.row].isPlayerOne) {
-                    cell.statusLabel.text = games[indexPath.row].opponentName + "'s move.";
-                } else {
-                    cell.statusLabel.text = "Your move!";
-                }
+                cell.statusLabel.text = game.isPlayerOne ? "Their move." : "Your move!"
             case .PlayerOneWon:
-                if (games[indexPath.row].isPlayerOne) {
-                    cell.statusLabel.text = "You won! Rematch?";
-                } else {
-                    cell.statusLabel.text = games[indexPath.row].opponentName + " beat you. Rematch?";
-                }
+                cell.statusLabel.text = game.isPlayerOne ? "You won! Rematch?" : "They beat you. Rematch?"
             case .PlayerTwoWon:
-                if (games[indexPath.row].isPlayerOne) {
-                    cell.statusLabel.text = games[indexPath.row].opponentName + " beat you. Rematch?";
-                } else {
-                    cell.statusLabel.text = "You won! Rematch?";
-                }
+                cell.statusLabel.text = game.isPlayerOne ? "They beat you. Rematch?" : "You won! Rematch?"
         }
         
         return cell

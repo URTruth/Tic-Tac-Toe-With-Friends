@@ -5,7 +5,7 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <mutableArray key="ChocolateCoveredRaindropsHollow.ttf">
+        <mutableArray key="ChocolateCoveredRaindropsBold.ttf">
             <string>ChocolateCoveredRaindrops</string>
             <string>ChocolateCoveredRaindrops</string>
             <string>ChocolateCoveredRaindrops</string>
@@ -190,14 +190,14 @@
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Wants you to play!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vjd-iG-1yw">
-                                            <rect key="frame" x="88" y="46" width="424" height="21"/>
+                                            <rect key="frame" x="88" y="46" width="504" height="21"/>
                                             <animations/>
                                             <fontDescription key="fontDescription" type="system" weight="medium" pointSize="13"/>
                                             <color key="textColor" red="0.3411764706" green="0.24313725489999999" blue="0.4941176471" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zCT-Tr-Lii">
-                                            <rect key="frame" x="88" y="14" width="27" height="27"/>
+                                            <rect key="frame" x="80" y="14" width="27" height="27"/>
                                             <animations/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="27" id="JKn-6M-IKp"/>
@@ -205,7 +205,7 @@
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Joe Brown" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XOR-nv-yaY">
-                                            <rect key="frame" x="123" y="17" width="424" height="21"/>
+                                            <rect key="frame" x="123" y="17" width="469" height="21"/>
                                             <animations/>
                                             <fontDescription key="fontDescription" name="ChocolateCoveredRaindrops" family="ChocolateCoveredRaindrops" pointSize="30"/>
                                             <color key="textColor" red="0.14901960780000001" green="0.14901960780000001" blue="0.14901960780000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -214,15 +214,17 @@
                                     </subviews>
                                     <animations/>
                                     <constraints>
-                                        <constraint firstItem="XOR-nv-yaY" firstAttribute="top" secondItem="Jbh-IQ-7bq" secondAttribute="topMargin" constant="9" id="2UR-cM-HDD"/>
-                                        <constraint firstItem="XOR-nv-yaY" firstAttribute="leading" secondItem="zCT-Tr-Lii" secondAttribute="trailing" constant="8" id="9In-oi-OpC"/>
+                                        <constraint firstItem="XOR-nv-yaY" firstAttribute="top" secondItem="Jbh-IQ-7bq" secondAttribute="topMargin" constant="7" id="2UR-cM-HDD"/>
+                                        <constraint firstItem="XOR-nv-yaY" firstAttribute="leading" secondItem="zCT-Tr-Lii" secondAttribute="trailing" id="9In-oi-OpC"/>
                                         <constraint firstItem="23E-g8-OYD" firstAttribute="leading" secondItem="Jbh-IQ-7bq" secondAttribute="leadingMargin" constant="4" id="CKs-gp-cmm"/>
-                                        <constraint firstItem="zCT-Tr-Lii" firstAttribute="leading" secondItem="23E-g8-OYD" secondAttribute="trailing" constant="16" id="NFQ-Nd-bP8"/>
+                                        <constraint firstItem="zCT-Tr-Lii" firstAttribute="leading" secondItem="23E-g8-OYD" secondAttribute="trailing" constant="8" id="NFQ-Nd-bP8"/>
                                         <constraint firstItem="zCT-Tr-Lii" firstAttribute="top" secondItem="Jbh-IQ-7bq" secondAttribute="topMargin" constant="6" id="TI9-og-XlB"/>
                                         <constraint firstItem="23E-g8-OYD" firstAttribute="centerY" secondItem="Jbh-IQ-7bq" secondAttribute="centerY" id="cYB-Pe-WNq"/>
                                         <constraint firstItem="Vjd-iG-1yw" firstAttribute="leading" secondItem="23E-g8-OYD" secondAttribute="trailing" constant="12" id="eU6-Y4-k6J"/>
+                                        <constraint firstItem="Vjd-iG-1yw" firstAttribute="trailing" secondItem="Jbh-IQ-7bq" secondAttribute="trailingMargin" id="hbf-jt-Yf3"/>
                                         <constraint firstItem="XOR-nv-yaY" firstAttribute="leading" secondItem="23E-g8-OYD" secondAttribute="trailing" constant="10" id="hfw-yQ-elh"/>
                                         <constraint firstItem="Vjd-iG-1yw" firstAttribute="top" secondItem="zCT-Tr-Lii" secondAttribute="bottom" constant="5" id="lDG-XM-YuG"/>
+                                        <constraint firstItem="XOR-nv-yaY" firstAttribute="trailing" secondItem="Jbh-IQ-7bq" secondAttribute="trailingMargin" id="yse-MS-od7"/>
                                     </constraints>
                                     <variation key="default">
                                         <mask key="constraints">

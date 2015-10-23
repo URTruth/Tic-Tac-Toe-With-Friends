@@ -22,9 +22,16 @@ class LoginController: UIViewController {
         
         Digits.sharedInstance().authenticateWithDigitsAppearance(appearance, viewController: nil, title: nil) { (session, error) in
             if session != nil {
-                print(session.phoneNumber)
-                print(session.userID)
-                self.performSegueWithIdentifier("TabSegue", sender: nil)
+                User.sharedInstance.digitsId = session.userID
+                User.sharedInstance.phone = session.phoneNumber
+                User.sharedInstance.login({
+                    (isSuccess: Bool) in
+                    if (isSuccess) {
+                        self.performSegueWithIdentifier("TabSegue", sender: nil)
+                    } else {
+                        self.performSegueWithIdentifier("SigninSegue", sender: nil)
+                    }
+                 })
             }
         }
     }
