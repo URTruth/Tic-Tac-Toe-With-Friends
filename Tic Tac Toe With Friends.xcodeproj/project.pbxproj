@@ -20,7 +20,6 @@
 		B6DA3E301BD9D9A7004A9CEF /* KeychainAccess.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6DA3E2E1BD9D994004A9CEF /* KeychainAccess.framework */; };
 		B6DA3E311BD9D9A7004A9CEF /* KeychainAccess.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B6DA3E2E1BD9D994004A9CEF /* KeychainAccess.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B6FD06A41BD1F7A4000B64FA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FD06A31BD1F7A4000B64FA /* AppDelegate.swift */; };
-		B6FD06A61BD1F7A4000B64FA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FD06A51BD1F7A4000B64FA /* ViewController.swift */; };
 		B6FD06A91BD1F7A4000B64FA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6FD06A71BD1F7A4000B64FA /* Main.storyboard */; };
 		B6FD06AB1BD1F7A4000B64FA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B6FD06AA1BD1F7A4000B64FA /* Assets.xcassets */; };
 		B6FD06AE1BD1F7A4000B64FA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6FD06AC1BD1F7A4000B64FA /* LaunchScreen.storyboard */; };
@@ -82,7 +81,6 @@
 		B6DA3E2E1BD9D994004A9CEF /* KeychainAccess.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = KeychainAccess.framework; sourceTree = "<group>"; };
 		B6FD06A01BD1F7A4000B64FA /* Tic Tac Toe With Friends.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tic Tac Toe With Friends.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6FD06A31BD1F7A4000B64FA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B6FD06A51BD1F7A4000B64FA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		B6FD06A81BD1F7A4000B64FA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B6FD06AA1BD1F7A4000B64FA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B6FD06AD1BD1F7A4000B64FA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -204,7 +202,6 @@
 				B6FD07271BD21499000B64FA /* Frameworks */,
 				B6FD06FE1BD204C5000B64FA /* Fonts */,
 				B6FD06A31BD1F7A4000B64FA /* AppDelegate.swift */,
-				B6FD06A51BD1F7A4000B64FA /* ViewController.swift */,
 				B6FD06A71BD1F7A4000B64FA /* Main.storyboard */,
 				B6FD06AA1BD1F7A4000B64FA /* Assets.xcassets */,
 				B6FD06AC1BD1F7A4000B64FA /* LaunchScreen.storyboard */,
@@ -378,7 +375,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B6FD06A61BD1F7A4000B64FA /* ViewController.swift in Sources */,
 				B6B4CAD21BD47F3800DA6041 /* Game.swift in Sources */,
 				B6FD07391BD22248000B64FA /* UIColor.swift in Sources */,
 				B6FD06B81BD1FCE9000B64FA /* LoginController.swift in Sources */,
