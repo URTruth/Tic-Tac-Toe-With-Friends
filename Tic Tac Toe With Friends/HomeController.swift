@@ -20,6 +20,10 @@ class HomeController: UITableViewController {
         navigationController?.setNavigationBarHidden(navigationController?.navigationBarHidden == false, animated: true)
         automaticallyAdjustsScrollViewInsets = false;
         
+        let backButton = UIBarButtonItem(title: "", style: UIBarButtonItemStyle.Plain, target: self, action: nil)
+        backButton.tintColor = UIColor.whiteColor()
+        navigationItem.backBarButtonItem = backButton
+        
         Alamofire.request(.GET, "http://www.wavelinkllc.com/tictactoewithfriends/get_games.php", parameters: ["userId": 2])
             .responseJSON { response in
                 let dataArray: NSArray = (response.result.value as? NSArray)!
@@ -42,7 +46,7 @@ class HomeController: UITableViewController {
         let cell = tableView.dequeueReusableCellWithIdentifier("GameCell") as! GameCell
         let game: Game = games[indexPath.row]
         
-        cell.profileImageView.af_setImageWithURL(NSURL(string: game.opponentPhoto)!, placeholderImage: UIImage(named: "Home"))
+        cell.profileImageView.af_setImageWithURL(NSURL(string: game.opponentPhoto)!, placeholderImage: UIImage(named: "User"))
         cell.iconImageView.image = UIImage(named: "User")
         cell.nameLabel.text = game.opponentName
         
@@ -71,16 +75,18 @@ class HomeController: UITableViewController {
         default: return 150
         }
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        self.performSegueWithIdentifier("GameSegue", sender: nil)
     }
-    */
+
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "GameSegue" {
+            let controller: GameController = segue.destinationViewController as! GameController
+            let indexPath = self.tableView.indexPathForSelectedRow
+            controller.game.id = games[indexPath!.row].id
+        }
+    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

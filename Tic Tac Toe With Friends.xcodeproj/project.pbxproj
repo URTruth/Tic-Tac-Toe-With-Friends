@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		B61D6D541BD4251100263945 /* GameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B61D6D531BD4251100263945 /* GameCell.swift */; settings = {ASSET_TAGS = (); }; };
+		B66442E71BDC073600A6F7B6 /* Board.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66442E61BDC073600A6F7B6 /* Board.swift */; settings = {ASSET_TAGS = (); }; };
+		B66442EB1BDC37CB00A6F7B6 /* SpaceButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66442EA1BDC37CB00A6F7B6 /* SpaceButton.swift */; settings = {ASSET_TAGS = (); }; };
+		B66442EF1BDD682C00A6F7B6 /* Board3x3.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66442EE1BDD682C00A6F7B6 /* Board3x3.swift */; settings = {ASSET_TAGS = (); }; };
+		B66442F11BDDA2D400A6F7B6 /* SpaceImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66442F01BDDA2D400A6F7B6 /* SpaceImageView.swift */; settings = {ASSET_TAGS = (); }; };
+		B6ADBD7B1BDB42E10082DAD9 /* GameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6ADBD7A1BDB42E10082DAD9 /* GameController.swift */; settings = {ASSET_TAGS = (); }; };
 		B6B4C7B71BD4409A00DA6041 /* Cartfile in Resources */ = {isa = PBXBuildFile; fileRef = B6B4C7B61BD4409A00DA6041 /* Cartfile */; settings = {ASSET_TAGS = (); }; };
 		B6B4C94C1BD4451300DA6041 /* Cartfile.resolved in Resources */ = {isa = PBXBuildFile; fileRef = B6B4C7BC1BD4451300DA6041 /* Cartfile.resolved */; settings = {ASSET_TAGS = (); }; };
 		B6B4CAC81BD4471600DA6041 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6B4C7C01BD4451300DA6041 /* Alamofire.framework */; };
@@ -72,6 +77,11 @@
 
 /* Begin PBXFileReference section */
 		B61D6D531BD4251100263945 /* GameCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameCell.swift; sourceTree = "<group>"; };
+		B66442E61BDC073600A6F7B6 /* Board.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Board.swift; sourceTree = "<group>"; };
+		B66442EA1BDC37CB00A6F7B6 /* SpaceButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpaceButton.swift; sourceTree = "<group>"; };
+		B66442EE1BDD682C00A6F7B6 /* Board3x3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Board3x3.swift; sourceTree = "<group>"; };
+		B66442F01BDDA2D400A6F7B6 /* SpaceImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpaceImageView.swift; sourceTree = "<group>"; };
+		B6ADBD7A1BDB42E10082DAD9 /* GameController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameController.swift; sourceTree = "<group>"; };
 		B6B4C7B61BD4409A00DA6041 /* Cartfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
 		B6B4C7BC1BD4451300DA6041 /* Cartfile.resolved */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile.resolved; sourceTree = "<group>"; };
 		B6B4C7C01BD4451300DA6041 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Alamofire.framework; sourceTree = "<group>"; };
@@ -173,6 +183,10 @@
 			children = (
 				B6B4CAD11BD47F3800DA6041 /* Game.swift */,
 				B6DA3E2C1BD9C285004A9CEF /* User.swift */,
+				B66442E61BDC073600A6F7B6 /* Board.swift */,
+				B66442EA1BDC37CB00A6F7B6 /* SpaceButton.swift */,
+				B66442EE1BDD682C00A6F7B6 /* Board3x3.swift */,
+				B66442F01BDDA2D400A6F7B6 /* SpaceImageView.swift */,
 			);
 			path = Libraries;
 			sourceTree = "<group>";
@@ -209,6 +223,7 @@
 				B6FD06B71BD1FCE9000B64FA /* LoginController.swift */,
 				B6FD073A1BD23376000B64FA /* HomeController.swift */,
 				B6FD07401BD2C88B000B64FA /* TabBarController.swift */,
+				B6ADBD7A1BDB42E10082DAD9 /* GameController.swift */,
 			);
 			path = "Tic Tac Toe With Friends";
 			sourceTree = "<group>";
@@ -376,11 +391,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				B6B4CAD21BD47F3800DA6041 /* Game.swift in Sources */,
+				B6ADBD7B1BDB42E10082DAD9 /* GameController.swift in Sources */,
 				B6FD07391BD22248000B64FA /* UIColor.swift in Sources */,
 				B6FD06B81BD1FCE9000B64FA /* LoginController.swift in Sources */,
+				B66442E71BDC073600A6F7B6 /* Board.swift in Sources */,
 				B61D6D541BD4251100263945 /* GameCell.swift in Sources */,
+				B66442EF1BDD682C00A6F7B6 /* Board3x3.swift in Sources */,
 				B6FD07411BD2C88B000B64FA /* TabBarController.swift in Sources */,
 				B6FD06A41BD1F7A4000B64FA /* AppDelegate.swift in Sources */,
+				B66442F11BDDA2D400A6F7B6 /* SpaceImageView.swift in Sources */,
+				B66442EB1BDC37CB00A6F7B6 /* SpaceButton.swift in Sources */,
 				B6FD073B1BD23376000B64FA /* HomeController.swift in Sources */,
 				B6DA3E2D1BD9C285004A9CEF /* User.swift in Sources */,
 				B6FD07431BD2D463000B64FA /* UIImage.swift in Sources */,

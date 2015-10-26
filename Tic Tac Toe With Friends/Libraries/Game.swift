@@ -16,13 +16,19 @@ enum GameStatus: Int {
     case PlayerTwoWon
 }
 
+enum SpaceStatus: Int {
+    case Unmarked = 0
+    case PlayerOneMarked
+    case PlayerTwoMarked
+}
+
 class Game: NSObject {
     
     var id: Int = 0
     var opponentId: Int = 0
     var opponentName: String = ""
     var opponentPhoto: String = ""
-    var type: Int = 0
+    var size: Int = 3
     var status: Int = 0
     var playerWins: Int = 0
     var opponentWins: Int = 0
@@ -36,6 +42,10 @@ class Game: NSObject {
     var space3x1: Int = 0
     var space3x2: Int = 0
     var space3x3: Int = 0
+    
+    override init() {
+        super.init()
+    }
     
     init(JSONData: Dictionary<String, AnyObject>) {
         super.init()
