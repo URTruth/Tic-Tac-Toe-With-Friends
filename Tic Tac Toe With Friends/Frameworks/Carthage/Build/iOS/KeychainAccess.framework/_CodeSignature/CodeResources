@@ -6,7 +6,7 @@
 	<dict>
 		<key>Headers/KeychainAccess-Swift.h</key>
 		<data>
-		5rKbju6NYpoOkx95zLvq4dg8gTw=
+		WD8wJy8UMVJzEhtFzo28USwikYw=
 		</data>
 		<key>Headers/KeychainAccess.h</key>
 		<data>
@@ -14,23 +14,23 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		Vlx78i5U/ItbTvIjnPJ5w9urEaA=
+		WMuKfwiAMOKAGTPZBJidrVZpXqs=
 		</data>
 		<key>Modules/KeychainAccess.swiftmodule/arm.swiftdoc</key>
 		<data>
-		OP8la3jkeSa42s6w6FAlkuUgeEg=
+		9RxEVF6sSru+frh1KP2915cMzZc=
 		</data>
 		<key>Modules/KeychainAccess.swiftmodule/arm.swiftmodule</key>
 		<data>
-		nFjBoyJDz1RG+J4SCU6uU1THAa0=
+		QdXaSIaN8H6er2nsmWXKBLv+2gc=
 		</data>
 		<key>Modules/KeychainAccess.swiftmodule/arm64.swiftdoc</key>
 		<data>
-		Zx21+74hRsJo+HcDIT4updBwReE=
+		ZgC8J5nkOEzX3Opi2wnOQzU1paI=
 		</data>
 		<key>Modules/KeychainAccess.swiftmodule/arm64.swiftmodule</key>
 		<data>
-		slmObp7vp459bgr1+ING6bo2Nxg=
+		dWBthkDbUZbndwRv3VRWL5/Qa4Q=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -41,7 +41,7 @@
 	<dict>
 		<key>Headers/KeychainAccess-Swift.h</key>
 		<data>
-		5rKbju6NYpoOkx95zLvq4dg8gTw=
+		WD8wJy8UMVJzEhtFzo28USwikYw=
 		</data>
 		<key>Headers/KeychainAccess.h</key>
 		<data>
@@ -49,19 +49,19 @@
 		</data>
 		<key>Modules/KeychainAccess.swiftmodule/arm.swiftdoc</key>
 		<data>
-		OP8la3jkeSa42s6w6FAlkuUgeEg=
+		9RxEVF6sSru+frh1KP2915cMzZc=
 		</data>
 		<key>Modules/KeychainAccess.swiftmodule/arm.swiftmodule</key>
 		<data>
-		nFjBoyJDz1RG+J4SCU6uU1THAa0=
+		QdXaSIaN8H6er2nsmWXKBLv+2gc=
 		</data>
 		<key>Modules/KeychainAccess.swiftmodule/arm64.swiftdoc</key>
 		<data>
-		Zx21+74hRsJo+HcDIT4updBwReE=
+		ZgC8J5nkOEzX3Opi2wnOQzU1paI=
 		</data>
 		<key>Modules/KeychainAccess.swiftmodule/arm64.swiftmodule</key>
 		<data>
-		slmObp7vp459bgr1+ING6bo2Nxg=
+		dWBthkDbUZbndwRv3VRWL5/Qa4Q=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
