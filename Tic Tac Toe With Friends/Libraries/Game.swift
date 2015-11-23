@@ -52,4 +52,17 @@ class Game: NSObject {
         self.setValuesForKeysWithDictionary(JSONData)
     }
     
+    func setSpaceStatus(row: Int, column: Int) {
+        let spaceStatus: SpaceStatus = (self.isPlayerOne) ? SpaceStatus.PlayerOneMarked : SpaceStatus.PlayerTwoMarked
+        if(row == 1 && column == 1) { self.space1x1 = spaceStatus.rawValue }
+        if(row == 1 && column == 2) { self.space1x2 = spaceStatus.rawValue }
+        if(row == 1 && column == 3) { self.space1x3 = spaceStatus.rawValue }
+        if(row == 2 && column == 1) { self.space2x1 = spaceStatus.rawValue }
+        if(row == 2 && column == 2) { self.space2x2 = spaceStatus.rawValue }
+        if(row == 2 && column == 3) { self.space2x3 = spaceStatus.rawValue }
+        if(row == 3 && column == 1) { self.space3x1 = spaceStatus.rawValue }
+        if(row == 3 && column == 2) { self.space3x2 = spaceStatus.rawValue }
+        if(row == 3 && column == 3) { self.space3x3 = spaceStatus.rawValue }
+    }
+    
 }

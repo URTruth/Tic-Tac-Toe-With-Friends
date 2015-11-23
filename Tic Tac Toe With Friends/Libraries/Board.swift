@@ -53,7 +53,7 @@ class Board {
                 let spaceBounds: CGRect = CGRectMake(CGFloat(x), CGFloat(y), CGFloat(spaceSize), CGFloat(spaceSize))
                 let pieceBounds: CGRect = CGRectMake(CGFloat(piecePadding), CGFloat(piecePadding), CGFloat(spaceSize - piecePadding * 2), CGFloat(spaceSize - piecePadding * 2))
                 let buttonBounds: CGRect = CGRectMake(0, 0, CGFloat(spaceSize), CGFloat(spaceSize))
-                print("x:" + String(x) + " y:" + String(y))
+                //print("x:" + String(x) + " y:" + String(y))
                 
                 let spaceBackground: UIView = UIView(frame: spaceBounds)
                 spaceBackground.backgroundColor = UIColor.ticTacToeBlueColor()

@@ -52,7 +52,35 @@ class GameController: UIViewController {
     }
     
     func spaceClicked(button: SpaceButton) {
-        print("row: " + String(button.row) + " column:" + String(button.column))
+        print("Space clicked - row: " + String(button.row) + " column:" + String(button.column))
+        self.game.setSpaceStatus(button.row, column: button.column)
+        /*
+        Alamofire.request(.POST, "http://www.wavelinkllc.com/tictactoewithfriends/move.php", parameters: ["gameId": self.game.id, "gameStatus": ])
+            .responseJSON { response in
+                if (response.result.isSuccess) {
+                    let data: Dictionary = (response.result.value as? Dictionary<String, AnyObject>)!
+                    if (data["isAuthenticated"] as! String == "true") {
+                        self.id = ""
+                        self.name = ""
+                        self.email = ""
+                        self.phone = ""
+                        self.photo = ""
+                        self.facebookId = ""
+                        self.twitterId = ""
+                        self.digitsId = ""
+                        self.wins = ""
+                        self.isLoggedIn = false
+                        self.keychain["userId"] = nil
+                        completion(isSuccess: true)
+                    } else {
+                        completion(isSuccess: false)
+                    }
+                } else {
+                    // network error
+                    completion(isSuccess: false)
+                }
+        }
+        */
     }
     
     override func didReceiveMemoryWarning() {
