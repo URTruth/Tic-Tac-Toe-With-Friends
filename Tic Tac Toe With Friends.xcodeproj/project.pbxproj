@@ -18,6 +18,7 @@
 		B6959B631C02B1C8001E7E12 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B6B4C7C01BD4451300DA6041 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B6959B641C02B1CD001E7E12 /* AlamofireImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6B4C7C21BD4451300DA6041 /* AlamofireImage.framework */; };
 		B6959B651C02B1CD001E7E12 /* AlamofireImage.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B6B4C7C21BD4451300DA6041 /* AlamofireImage.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B6959B671C042D17001E7E12 /* Game3x3.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6959B661C042D17001E7E12 /* Game3x3.swift */; };
 		B6ADBD7B1BDB42E10082DAD9 /* GameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6ADBD7A1BDB42E10082DAD9 /* GameController.swift */; };
 		B6B4C7B71BD4409A00DA6041 /* Cartfile in Resources */ = {isa = PBXBuildFile; fileRef = B6B4C7B61BD4409A00DA6041 /* Cartfile */; };
 		B6B4C94C1BD4451300DA6041 /* Cartfile.resolved in Resources */ = {isa = PBXBuildFile; fileRef = B6B4C7BC1BD4451300DA6041 /* Cartfile.resolved */; };
@@ -80,6 +81,7 @@
 		B66442EA1BDC37CB00A6F7B6 /* SpaceButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpaceButton.swift; sourceTree = "<group>"; };
 		B66442EE1BDD682C00A6F7B6 /* Board3x3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Board3x3.swift; sourceTree = "<group>"; };
 		B66442F01BDDA2D400A6F7B6 /* SpaceImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpaceImageView.swift; sourceTree = "<group>"; };
+		B6959B661C042D17001E7E12 /* Game3x3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Game3x3.swift; sourceTree = "<group>"; };
 		B6ADBD7A1BDB42E10082DAD9 /* GameController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameController.swift; sourceTree = "<group>"; };
 		B6B4C7B61BD4409A00DA6041 /* Cartfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
 		B6B4C7BC1BD4451300DA6041 /* Cartfile.resolved */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile.resolved; sourceTree = "<group>"; };
@@ -180,6 +182,7 @@
 			isa = PBXGroup;
 			children = (
 				B6B4CAD11BD47F3800DA6041 /* Game.swift */,
+				B6959B661C042D17001E7E12 /* Game3x3.swift */,
 				B6DA3E2C1BD9C285004A9CEF /* User.swift */,
 				B66442E61BDC073600A6F7B6 /* Board.swift */,
 				B66442EA1BDC37CB00A6F7B6 /* SpaceButton.swift */,
@@ -391,6 +394,7 @@
 				B6B4CAD21BD47F3800DA6041 /* Game.swift in Sources */,
 				B6ADBD7B1BDB42E10082DAD9 /* GameController.swift in Sources */,
 				B6FD07391BD22248000B64FA /* UIColor.swift in Sources */,
+				B6959B671C042D17001E7E12 /* Game3x3.swift in Sources */,
 				B6FD06B81BD1FCE9000B64FA /* LoginController.swift in Sources */,
 				B66442E71BDC073600A6F7B6 /* Board.swift in Sources */,
 				B61D6D541BD4251100263945 /* GameCell.swift in Sources */,

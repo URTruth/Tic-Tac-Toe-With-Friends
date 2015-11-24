@@ -53,7 +53,7 @@ class GameController: UIViewController {
     
     func spaceClicked(button: SpaceButton) {
         print("Space clicked - row: " + String(button.row) + " column:" + String(button.column))
-        self.game.setSpaceStatus(button.row, column: button.column)
+        self.game.setSpace(button.row, column: button.column)
         /*
         Alamofire.request(.POST, "http://www.wavelinkllc.com/tictactoewithfriends/move.php", parameters: ["gameId": self.game.id, "gameStatus": ])
             .responseJSON { response in
