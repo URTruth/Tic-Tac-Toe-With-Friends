@@ -18,7 +18,8 @@ class GameController: UIViewController {
     @IBOutlet var opponentNameLabel: UILabel!
     @IBOutlet var opponentWinsLabel: UILabel!
     
-    var game: Game = Game()
+    var gameId: Int = 0
+    var board: Board = Board()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,18 +31,18 @@ class GameController: UIViewController {
         self.playerProfileImageView.af_setImageWithURL(NSURL(string: User.sharedInstance.photo)!, placeholderImage: UIImage(named: "User"))
         self.playerNameLabel.text = User.sharedInstance.name
         
-        Alamofire.request(.GET, "http://www.wavelinkllc.com/tictactoewithfriends/get_game.php", parameters: ["gameId": game.id, "userId": User.sharedInstance.id])
+        Alamofire.request(.GET, "http://www.wavelinkllc.com/tictactoewithfriends/get_game.php", parameters: ["gameId": gameId, "userId": User.sharedInstance.id])
             .responseJSON { response in
                 if (response.result.isSuccess) {
                     if (response.result.value != nil) {
-                        self.game = Game.init(JSONData: response.result.value as! Dictionary<String, AnyObject>)
-                        self.playerWinsLabel.text = String(self.game.playerWins)
-                        self.opponentProfileImageView.af_setImageWithURL(NSURL(string: self.game.opponentPhoto)!, placeholderImage: UIImage(named: "User"))
-                        self.opponentNameLabel.text = self.game.opponentName
-                        self.opponentWinsLabel.text = String(self.game.opponentWins)
-                        let board: Board3x3 = Board3x3(game: self.game, user: User.sharedInstance, controller: self)
+                        let game: Game3x3 = Game3x3.init(JSONData: response.result.value as! Dictionary<String, AnyObject>)
+                        self.playerWinsLabel.text = String(game.playerWins)
+                        self.opponentProfileImageView.af_setImageWithURL(NSURL(string: game.opponentPhoto)!, placeholderImage: UIImage(named: "User"))
+                        self.opponentNameLabel.text = game.opponentName
+                        self.opponentWinsLabel.text = String(game.opponentWins)
+                        self.board = Board3x3(game: game, user: User.sharedInstance, controller: self)
                         let boardBounds: CGRect = CGRectMake(0, 200, UIScreen.mainScreen().bounds.width, UIScreen.mainScreen().bounds.height)
-                        self.view.addSubview(board.getBoardView(boardBounds))
+                        self.view.addSubview(self.board.getBoardView(boardBounds))
                     } else {
                         // could not find game
                     }
@@ -53,7 +54,7 @@ class GameController: UIViewController {
     
     func spaceClicked(button: SpaceButton) {
         print("Space clicked - row: " + String(button.row) + " column:" + String(button.column))
-        self.game.setSpace(button.row, column: button.column)
+        self.board.game.setSpace(button.row, column: button.column)
         /*
         Alamofire.request(.POST, "http://www.wavelinkllc.com/tictactoewithfriends/move.php", parameters: ["gameId": self.game.id, "gameStatus": ])
             .responseJSON { response in

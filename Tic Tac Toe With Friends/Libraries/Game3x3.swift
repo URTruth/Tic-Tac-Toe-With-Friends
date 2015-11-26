@@ -20,18 +20,36 @@ class Game3x3: Game {
         size = 3
     }
     
-    internal func isWinningSelectedSpaces(playerNumber: PlayerNumber) -> Bool {
-        if (space1x1 == playerNumber.rawValue && space1x2 == playerNumber.rawValue && space1x3 == playerNumber.rawValue) { return true }
-        if (space2x1 == playerNumber.rawValue && space2x2 == playerNumber.rawValue && space2x3 == playerNumber.rawValue) { return true }
-        if (space3x1 == playerNumber.rawValue && space3x2 == playerNumber.rawValue && space3x3 == playerNumber.rawValue) { return true }
+    internal override func didPlayerWin(playerNumber: PlayerNumber) -> Bool {
+        if (self.space1x1 == playerNumber.rawValue && self.space1x2 == playerNumber.rawValue && self.space1x3 == playerNumber.rawValue) { return true }
+        if (self.space2x1 == playerNumber.rawValue && self.space2x2 == playerNumber.rawValue && self.space2x3 == playerNumber.rawValue) { return true }
+        if (self.space3x1 == playerNumber.rawValue && self.space3x2 == playerNumber.rawValue && self.space3x3 == playerNumber.rawValue) { return true }
         
-        if (space1x1 == playerNumber.rawValue && space2x1 == playerNumber.rawValue && space3x1 == playerNumber.rawValue) { return true }
-        if (space1x2 == playerNumber.rawValue && space2x2 == playerNumber.rawValue && space3x2 == playerNumber.rawValue) { return true }
-        if (space1x3 == playerNumber.rawValue && space2x3 == playerNumber.rawValue && space3x3 == playerNumber.rawValue) { return true }
+        if (self.space1x1 == playerNumber.rawValue && self.space2x1 == playerNumber.rawValue && self.space3x1 == playerNumber.rawValue) { return true }
+        if (self.space1x2 == playerNumber.rawValue && self.space2x2 == playerNumber.rawValue && self.space3x2 == playerNumber.rawValue) { return true }
+        if (self.space1x3 == playerNumber.rawValue && self.space2x3 == playerNumber.rawValue && self.space3x3 == playerNumber.rawValue) { return true }
         
-        if (space1x1 == playerNumber.rawValue && space2x2 == playerNumber.rawValue && space3x3 == playerNumber.rawValue) { return true }
-        if (space1x3 == playerNumber.rawValue && space2x2 == playerNumber.rawValue && space3x1 == playerNumber.rawValue) { return true }
+        if (self.space1x1 == playerNumber.rawValue && self.space2x2 == playerNumber.rawValue && self.space3x3 == playerNumber.rawValue) { return true }
+        if (self.space1x3 == playerNumber.rawValue && self.space2x2 == playerNumber.rawValue && self.space3x1 == playerNumber.rawValue) { return true }
         
+        return false;
+    }
+    
+    internal override func isDraw() -> Bool {
+        if(!didPlayerWin(PlayerNumber.One) &&
+           !didPlayerWin(PlayerNumber.Two) &&
+           self.space1x1 != SpaceStatus.Unmarked.rawValue &&
+           self.space2x1 != SpaceStatus.Unmarked.rawValue &&
+           self.space3x1 != SpaceStatus.Unmarked.rawValue &&
+           self.space1x2 != SpaceStatus.Unmarked.rawValue &&
+           self.space2x2 != SpaceStatus.Unmarked.rawValue &&
+           self.space3x2 != SpaceStatus.Unmarked.rawValue &&
+           self.space1x3 != SpaceStatus.Unmarked.rawValue &&
+           self.space2x3 != SpaceStatus.Unmarked.rawValue &&
+           self.space3x3 != SpaceStatus.Unmarked.rawValue)
+        {
+            return true;
+        }
         return false;
     }
     

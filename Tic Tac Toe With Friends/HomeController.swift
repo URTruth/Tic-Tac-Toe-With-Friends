@@ -61,6 +61,8 @@ class HomeController: UITableViewController {
                 cell.statusLabel.text = game.isPlayerOne ? "You won! Rematch?" : "They beat you. Rematch?"
             case .PlayerTwoWon:
                 cell.statusLabel.text = game.isPlayerOne ? "They beat you. Rematch?" : "You won! Rematch?"
+            case .Draw:
+                cell.statusLabel.text = "It was a draw. Rematch?"
         }
         
         return cell
@@ -84,7 +86,7 @@ class HomeController: UITableViewController {
         if segue.identifier == "GameSegue" {
             let controller: GameController = segue.destinationViewController as! GameController
             let indexPath = self.tableView.indexPathForSelectedRow
-            controller.game.id = games[indexPath!.row].id
+            controller.gameId = games[indexPath!.row].id
         }
     }
     

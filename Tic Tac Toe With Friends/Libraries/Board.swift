@@ -14,9 +14,9 @@ protocol BoardProtocol {
 
 class Board {
     
-    var gameState: Game
-    var currentUser: User
-    var parentController: UIViewController
+    var game: Game
+    var user: User
+    var controller: UIViewController
     
     var numberOfRows: Int = 0
     var numberOfColumns: Int = 0
@@ -31,13 +31,22 @@ class Board {
     var spaceImageViews: [SpaceImageView] = []
     var spaceButtons: [SpaceButton] = []
 
-    init(game: Game, user: User, controller: UIViewController) {
-        gameState = game
-        currentUser = user
-        parentController = controller
+    init() {
+        self.game = Game()
+        self.user = User()
+        self.controller = UIViewController()
         
-        playerOnePhoto = gameState.isPlayerOne ? currentUser.photo : gameState.opponentPhoto
-        playerTwoPhoto = !gameState.isPlayerOne ? currentUser.photo : gameState.opponentPhoto
+        self.playerOnePhoto = self.game.isPlayerOne ? self.user.photo : self.game.opponentPhoto
+        self.playerTwoPhoto = !self.game.isPlayerOne ? self.user.photo : self.game.opponentPhoto
+    }
+    
+    init(game: Game, user: User, controller: UIViewController) {
+        self.game = game
+        self.user = user
+        self.controller = controller
+        
+        self.playerOnePhoto = self.game.isPlayerOne ? self.user.photo : self.game.opponentPhoto
+        self.playerTwoPhoto = !self.game.isPlayerOne ? self.user.photo : self.game.opponentPhoto
     }
     
     func getBoardView(bounds: CGRect) -> UIView {
@@ -102,25 +111,25 @@ class Board {
         
         button.removeTarget(nil, action: nil, forControlEvents: UIControlEvents.AllEvents)
         if (spaceStatus == .Unmarked) {
-            button.addTarget(parentController, action: Selector("spaceClicked:"), forControlEvents:.TouchUpInside)
+            button.addTarget(self.controller, action: Selector("spaceClicked:"), forControlEvents:.TouchUpInside)
         }
     }
     
     func getSpaceStatus(row: Int, column: Int) -> SpaceStatus {
-        if(row == 1 && column == 1) { return SpaceStatus(rawValue: gameState.space1x1)! }
-        if(row == 1 && column == 2) { return SpaceStatus(rawValue: gameState.space1x2)! }
-        if(row == 1 && column == 3) { return SpaceStatus(rawValue: gameState.space1x3)! }
-        if(row == 2 && column == 1) { return SpaceStatus(rawValue: gameState.space2x1)! }
-        if(row == 2 && column == 2) { return SpaceStatus(rawValue: gameState.space2x2)! }
-        if(row == 2 && column == 3) { return SpaceStatus(rawValue: gameState.space2x3)! }
-        if(row == 3 && column == 1) { return SpaceStatus(rawValue: gameState.space3x1)! }
-        if(row == 3 && column == 2) { return SpaceStatus(rawValue: gameState.space3x2)! }
-        if(row == 3 && column == 3) { return SpaceStatus(rawValue: gameState.space3x3)! }
+        if(row == 1 && column == 1) { return SpaceStatus(rawValue: self.game.space1x1)! }
+        if(row == 1 && column == 2) { return SpaceStatus(rawValue: self.game.space1x2)! }
+        if(row == 1 && column == 3) { return SpaceStatus(rawValue: self.game.space1x3)! }
+        if(row == 2 && column == 1) { return SpaceStatus(rawValue: self.game.space2x1)! }
+        if(row == 2 && column == 2) { return SpaceStatus(rawValue: self.game.space2x2)! }
+        if(row == 2 && column == 3) { return SpaceStatus(rawValue: self.game.space2x3)! }
+        if(row == 3 && column == 1) { return SpaceStatus(rawValue: self.game.space3x1)! }
+        if(row == 3 && column == 2) { return SpaceStatus(rawValue: self.game.space3x2)! }
+        if(row == 3 && column == 3) { return SpaceStatus(rawValue: self.game.space3x3)! }
         return SpaceStatus(rawValue: 0)!
     }
     
     func refreshPieces(game: Game) {
-        gameState = game
+        self.game = game
         for var columnIndex = 1; columnIndex <= numberOfColumns; ++columnIndex {
             for var rowIndex = 1; rowIndex <= numberOfRows; ++rowIndex {
                 let imageView: SpaceImageView = getSpaceImageView(rowIndex, column: columnIndex)

@@ -14,6 +14,7 @@ enum GameStatus: Int {
     case PlayerTwoTurn
     case PlayerOneWon
     case PlayerTwoWon
+    case Draw
 }
 
 enum PlayerNumber: Int {
@@ -58,16 +59,33 @@ class Game: NSObject {
     }
     
     internal func setSpace(row: Int, column: Int) {
-        let status: SpaceStatus = self.isPlayerOne ? SpaceStatus.PlayerOneMarked : SpaceStatus.PlayerTwoMarked
-        if(row == 1 && column == 1) { self.space1x1 = status.rawValue }
-        if(row == 1 && column == 2) { self.space1x2 = status.rawValue }
-        if(row == 1 && column == 3) { self.space1x3 = status.rawValue }
-        if(row == 2 && column == 1) { self.space2x1 = status.rawValue }
-        if(row == 2 && column == 2) { self.space2x2 = status.rawValue }
-        if(row == 2 && column == 3) { self.space2x3 = status.rawValue }
-        if(row == 3 && column == 1) { self.space3x1 = status.rawValue }
-        if(row == 3 && column == 2) { self.space3x2 = status.rawValue }
-        if(row == 3 && column == 3) { self.space3x3 = status.rawValue }
+        let spaceStatus: SpaceStatus = self.isPlayerOne ? SpaceStatus.PlayerOneMarked : SpaceStatus.PlayerTwoMarked
+        if(row == 1 && column == 1) { self.space1x1 = spaceStatus.rawValue }
+        if(row == 1 && column == 2) { self.space1x2 = spaceStatus.rawValue }
+        if(row == 1 && column == 3) { self.space1x3 = spaceStatus.rawValue }
+        if(row == 2 && column == 1) { self.space2x1 = spaceStatus.rawValue }
+        if(row == 2 && column == 2) { self.space2x2 = spaceStatus.rawValue }
+        if(row == 2 && column == 3) { self.space2x3 = spaceStatus.rawValue }
+        if(row == 3 && column == 1) { self.space3x1 = spaceStatus.rawValue }
+        if(row == 3 && column == 2) { self.space3x2 = spaceStatus.rawValue }
+        if(row == 3 && column == 3) { self.space3x3 = spaceStatus.rawValue }
+        
+        let playerNumber: PlayerNumber = self.isPlayerOne ? PlayerNumber.One : PlayerNumber.Two
+        if(didPlayerWin(playerNumber)) {
+            self.status = self.isPlayerOne ? GameStatus.PlayerOneWon.rawValue : GameStatus.PlayerTwoWon.rawValue
+        } else if(isDraw()) {
+            self.status = GameStatus.Draw.rawValue
+        } else {
+            self.status = self.isPlayerOne ? GameStatus.PlayerTwoTurn.rawValue : GameStatus.PlayerOneTurn.rawValue
+        }
+    }
+    
+    internal func didPlayerWin(playerNumber: PlayerNumber) -> Bool {
+        preconditionFailure("The didPlayerWin method must be overridden by classes derived from Game")
+    }
+    
+    internal func isDraw() -> Bool {
+        preconditionFailure("The isDraw method must be overridden by classes derived from Game")
     }
     
 }
