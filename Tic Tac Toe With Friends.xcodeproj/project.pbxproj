@@ -12,13 +12,13 @@
 		B66442EB1BDC37CB00A6F7B6 /* SpaceButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66442EA1BDC37CB00A6F7B6 /* SpaceButton.swift */; };
 		B66442EF1BDD682C00A6F7B6 /* Board3x3.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66442EE1BDD682C00A6F7B6 /* Board3x3.swift */; };
 		B66442F11BDDA2D400A6F7B6 /* SpaceImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66442F01BDDA2D400A6F7B6 /* SpaceImageView.swift */; };
-		B6959B5F1C02AE72001E7E12 /* KeychainAccess.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6DA3E2E1BD9D994004A9CEF /* KeychainAccess.framework */; };
-		B6959B601C02AE72001E7E12 /* KeychainAccess.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B6DA3E2E1BD9D994004A9CEF /* KeychainAccess.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		B6959B621C02B1C8001E7E12 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6B4C7C01BD4451300DA6041 /* Alamofire.framework */; };
-		B6959B631C02B1C8001E7E12 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B6B4C7C01BD4451300DA6041 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		B6959B641C02B1CD001E7E12 /* AlamofireImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6B4C7C21BD4451300DA6041 /* AlamofireImage.framework */; };
-		B6959B651C02B1CD001E7E12 /* AlamofireImage.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B6B4C7C21BD4451300DA6041 /* AlamofireImage.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B6959B671C042D17001E7E12 /* Game3x3.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6959B661C042D17001E7E12 /* Game3x3.swift */; };
+		B6A767C11D25E50300A010A1 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6A767BB1D25DEEE00A010A1 /* Alamofire.framework */; };
+		B6A767C21D25E51A00A010A1 /* AlamofireImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6A767BD1D25E3D700A010A1 /* AlamofireImage.framework */; };
+		B6A767C31D25E53B00A010A1 /* KeychainAccess.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6A767BF1D25E3DF00A010A1 /* KeychainAccess.framework */; };
+		B6A767C41D25E5BE00A010A1 /* KeychainAccess.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B6A767BF1D25E3DF00A010A1 /* KeychainAccess.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B6A767C51D25E5C600A010A1 /* AlamofireImage.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B6A767BD1D25E3D700A010A1 /* AlamofireImage.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B6A767C61D25E5CD00A010A1 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B6A767BB1D25DEEE00A010A1 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B6ADBD7B1BDB42E10082DAD9 /* GameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6ADBD7A1BDB42E10082DAD9 /* GameController.swift */; };
 		B6B4C7B71BD4409A00DA6041 /* Cartfile in Resources */ = {isa = PBXBuildFile; fileRef = B6B4C7B61BD4409A00DA6041 /* Cartfile */; };
 		B6B4C94C1BD4451300DA6041 /* Cartfile.resolved in Resources */ = {isa = PBXBuildFile; fileRef = B6B4C7BC1BD4451300DA6041 /* Cartfile.resolved */; };
@@ -66,9 +66,9 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				B6959B651C02B1CD001E7E12 /* AlamofireImage.framework in Embed Frameworks */,
-				B6959B601C02AE72001E7E12 /* KeychainAccess.framework in Embed Frameworks */,
-				B6959B631C02B1C8001E7E12 /* Alamofire.framework in Embed Frameworks */,
+				B6A767C61D25E5CD00A010A1 /* Alamofire.framework in Embed Frameworks */,
+				B6A767C51D25E5C600A010A1 /* AlamofireImage.framework in Embed Frameworks */,
+				B6A767C41D25E5BE00A010A1 /* KeychainAccess.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -82,14 +82,14 @@
 		B66442EE1BDD682C00A6F7B6 /* Board3x3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Board3x3.swift; sourceTree = "<group>"; };
 		B66442F01BDDA2D400A6F7B6 /* SpaceImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpaceImageView.swift; sourceTree = "<group>"; };
 		B6959B661C042D17001E7E12 /* Game3x3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Game3x3.swift; sourceTree = "<group>"; };
+		B6A767BB1D25DEEE00A010A1 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Alamofire.framework; sourceTree = "<group>"; };
+		B6A767BD1D25E3D700A010A1 /* AlamofireImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AlamofireImage.framework; sourceTree = "<group>"; };
+		B6A767BF1D25E3DF00A010A1 /* KeychainAccess.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = KeychainAccess.framework; sourceTree = "<group>"; };
 		B6ADBD7A1BDB42E10082DAD9 /* GameController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameController.swift; sourceTree = "<group>"; };
 		B6B4C7B61BD4409A00DA6041 /* Cartfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
 		B6B4C7BC1BD4451300DA6041 /* Cartfile.resolved */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile.resolved; sourceTree = "<group>"; };
-		B6B4C7C01BD4451300DA6041 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Alamofire.framework; sourceTree = "<group>"; };
-		B6B4C7C21BD4451300DA6041 /* AlamofireImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AlamofireImage.framework; sourceTree = "<group>"; };
 		B6B4CAD11BD47F3800DA6041 /* Game.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		B6DA3E2C1BD9C285004A9CEF /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		B6DA3E2E1BD9D994004A9CEF /* KeychainAccess.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = KeychainAccess.framework; sourceTree = "<group>"; };
 		B6FD06A01BD1F7A4000B64FA /* Tic Tac Toe With Friends.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tic Tac Toe With Friends.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6FD06A31BD1F7A4000B64FA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B6FD06A81BD1F7A4000B64FA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -132,11 +132,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B6A767C31D25E53B00A010A1 /* KeychainAccess.framework in Frameworks */,
+				B6A767C21D25E51A00A010A1 /* AlamofireImage.framework in Frameworks */,
+				B6A767C11D25E50300A010A1 /* Alamofire.framework in Frameworks */,
 				B6FD07331BD21799000B64FA /* Fabric.framework in Frameworks */,
 				B6FD07361BD21799000B64FA /* TwitterCore.framework in Frameworks */,
-				B6959B5F1C02AE72001E7E12 /* KeychainAccess.framework in Frameworks */,
-				B6959B641C02B1CD001E7E12 /* AlamofireImage.framework in Frameworks */,
-				B6959B621C02B1C8001E7E12 /* Alamofire.framework in Frameworks */,
 				B6FD07341BD21799000B64FA /* DigitsKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -171,9 +171,9 @@
 		B6B4C7BF1BD4451300DA6041 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				B6DA3E2E1BD9D994004A9CEF /* KeychainAccess.framework */,
-				B6B4C7C01BD4451300DA6041 /* Alamofire.framework */,
-				B6B4C7C21BD4451300DA6041 /* AlamofireImage.framework */,
+				B6A767BF1D25E3DF00A010A1 /* KeychainAccess.framework */,
+				B6A767BD1D25E3D700A010A1 /* AlamofireImage.framework */,
+				B6A767BB1D25DEEE00A010A1 /* Alamofire.framework */,
 			);
 			path = iOS;
 			sourceTree = "<group>";
@@ -548,6 +548,11 @@
 					Toe,
 					With,
 					Friends/Frameworks/Carthage/Build/iOS,
+					"$(PROJECT_DIR)/Tic",
+					Tac,
+					Toe,
+					With,
+					Friends/Frameworks/Carthage/Build/iOS,
 				);
 				INFOPLIST_FILE = "Tic Tac Toe With Friends/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -581,6 +586,11 @@
 					Toe,
 					With,
 					Friends/Frameworks/Carthage/Checkouts/AlamofireImage/Carthage/Build/iOS,
+					"$(PROJECT_DIR)/Tic",
+					Tac,
+					Toe,
+					With,
+					Friends/Frameworks/Carthage/Build/iOS,
 					"$(PROJECT_DIR)/Tic",
 					Tac,
 					Toe,
